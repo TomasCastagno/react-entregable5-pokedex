@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PokemonCard from './PokemonCard';
 
-const PokemonCardTypes = ({ typeName, setPokemonSelected }) => {
+const PokemonCardTypes = ({ typeName, setPokemonSelected, setDisablePaginated }) => {
 
   const [types, setTypes] = useState([]);
 
@@ -14,6 +14,10 @@ const PokemonCardTypes = ({ typeName, setPokemonSelected }) => {
       .get(`https://pokeapi.co/api/v2/type/${typeName}`)
       .then(res => setTypes(res.data.pokemon))
     setPokemonSelected("")
+
+ 
+      setDisablePaginated(true)
+
   }, [typeName]);
 
 

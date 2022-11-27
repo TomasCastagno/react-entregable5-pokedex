@@ -66,6 +66,7 @@ h3 {
   background-color: rgba(25, 105, 96, .5);
   box-shadow: 2px 2px 8px 5px rgba(255, 255, 255, 0.5);
   border-style: none;
+  color: white;
 
 }
 
@@ -74,7 +75,7 @@ h3 {
   justify-content: center;
   align-items: center;
   align-content: center;
-
+  color: white;
 }
 
 
@@ -221,6 +222,7 @@ select option:hover {
   align-items: flex-start;
   border-radius: 10px;
   align-self: center;
+  color: white;
 }
 
 @media (max-width: 480px) {
@@ -241,6 +243,7 @@ select option:hover {
   text-transform: capitalize;
   border-style: none;
   background-color: rgba(36, 36, 36, .3);
+  color: white;
 }
 
 .results-button:hover {
@@ -354,7 +357,8 @@ select option:hover {
   border-radius: 5px;
   margin: 1px;
   border-style: none;
-  background-color: rgba(36, 36, 36, .5);
+  background-color: rgba(36, 36, 36, .1);
+  color: white;
 }
 
 .paginated button:hover {

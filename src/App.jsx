@@ -17,7 +17,6 @@ function App() {
             <Route path='/pokedex/:id' element={<Pokemon />} />
           </Route>
         </Routes>
-        <footer>By Walter Tomás Castagno</footer>
       </div>
     </HashRouter>
   )

@@ -96,6 +96,7 @@ const Pokedex = () => {
     setInputSearch(name);
   };
 
+
   const navigate = useNavigate();
 
 
@@ -219,10 +220,15 @@ const Pokedex = () => {
             pokemonSelected={pokemonSelected}
             setPokemonSelected={setPokemonSelected}
           />)
+          
           :
 
           typeSelected ?
-            (<PokemonCardTypes typeName={typeName} setPokemonSelected={setPokemonSelected} />)
+            (<PokemonCardTypes 
+              typeName={typeName} 
+              setPokemonSelected={setPokemonSelected} 
+              setDisablePaginated={setDisablePaginated} 
+            />)
             :
             (pokemonPaginated.map(poke => (
               <div key={poke.url}>

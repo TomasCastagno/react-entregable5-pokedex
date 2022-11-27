@@ -37,6 +37,8 @@ const InputName = () => {
           </span>
         </button>
       </form>
+      
+      <footer>By Walter Tomás Castagno</footer>
     </div>
   );
 };
