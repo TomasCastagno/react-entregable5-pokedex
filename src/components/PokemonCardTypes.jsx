@@ -46,7 +46,7 @@ const PokemonCardTypes = ({ typeName, setPokemonSelected }) => {
     <div className='list_pokedex'>
       {pokemonPaginated?.map(type => (
         <div key={type.pokemon.name}>
-          <PokemonCard poke={type.pokemon} />
+          <PokemonCard poke={type.pokemon} typeName={typeName} />
         </div>
       ))
       }

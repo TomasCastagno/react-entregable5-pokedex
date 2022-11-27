@@ -21,7 +21,7 @@ const Pokemon = () => {
     <>
       <section className='pokemon-detail'>
         <button onClick={() => navigate(-1)} className="button-back">
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
             undo
           </span>
         </button>

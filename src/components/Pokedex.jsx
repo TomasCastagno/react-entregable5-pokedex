@@ -103,7 +103,7 @@ const Pokedex = () => {
     <div className='pokedex'>
 
       <button onClick={() => navigate(-1)} className="button-back">
-        <span class="material-symbols-outlined">
+        <span className="material-symbols-outlined">
           undo
         </span>
       </button>
@@ -137,10 +137,10 @@ const Pokedex = () => {
 
         {typeSelected ?
 
-          (<select name="type-selected" id="search-input">
-            <option disabled selected value="default">select a type of pokemon</option>
+          (<select name="type-selected" id="search-input" defaultValue='default' onChange={(e) => setTypeName(e.target.value)}>
+            <option disabled value="default">select a type of pokemon</option>
             <option value="AllPokemons"
-              onClick={() => {
+              onSelect={() => {
                 setTypeSelected(false);
                 setInputSearch("");
                 setPokemonSelected("");
@@ -153,7 +153,7 @@ const Pokedex = () => {
               <option
                 value={type.name}
                 key={type.name}
-                onClick={() => filterSelected(type.name)}>
+                onSelect={() => filterSelected(type.name)}>
                 {type.name}
               </option>
             ))}
@@ -226,7 +226,7 @@ const Pokedex = () => {
             :
             (pokemonPaginated.map(poke => (
               <div key={poke.url}>
-                <PokemonCard poke={poke} />
+                <PokemonCard poke={poke}/>
               </div>))
             )
         }
