@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import PokemonCard from './PokemonCard';
 import SelectedPokemon from './SelectedPokemon';
 import PokemonCardTypes from './PokemonCardTypes';
+import { useNavigate } from 'react-router-dom';
 
 
 const Pokedex = () => {
@@ -95,15 +96,23 @@ const Pokedex = () => {
     setInputSearch(name);
   };
 
-
+  const navigate = useNavigate();
 
 
   return (
     <div className='pokedex'>
 
+      <button onClick={() => navigate(-1)} className="button-back">
+        <span class="material-symbols-outlined">
+          undo
+        </span>
+      </button>
+
+
       <h1>Pokedex</h1>
 
       <h2>Welcome {userName}, here you cand find your favorite pokemon</h2>
+
 
       <div className='buttons_filter-search'>
 
@@ -177,7 +186,7 @@ const Pokedex = () => {
                   setBoxSearch(false)
                 }}
                 className="material-symbols-outlined"
-                >
+              >
                 search
               </button>
             </div>

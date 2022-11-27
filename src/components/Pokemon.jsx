@@ -20,7 +20,11 @@ const Pokemon = () => {
   return (
     <>
       <section className='pokemon-detail'>
-        <button onClick={() => navigate(-1)}>Atrás</button>
+        <button onClick={() => navigate(-1)} className="button-back">
+          <span class="material-symbols-outlined">
+            undo
+          </span>
+        </button>
         <article>
           <img src={pokemon.sprites?.other.dream_world.front_default} alt={pokemon.name} />
           <h1 className='name-pokemon'>{pokemon.name}</h1>

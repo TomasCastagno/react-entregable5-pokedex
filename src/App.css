@@ -87,6 +87,15 @@ h3 {
   background-color: greenyellow;
 }
 
+.send-button:hover {
+  cursor: pointer;
+  text-shadow: 0 0 10px black;
+}
+
+.send-button:active {
+  background-color: aqua;
+}
+
 select option {
   text-transform: capitalize;
   color: #fcc804;
@@ -382,14 +391,31 @@ select option:hover {
   margin: auto;
 }
 
-.pokemon-detail button {
+
+/* boton atras */
+.button-back {
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  align-items: center;
   align-self: center;
-  width: 80px;
-  height: 30px;
   padding: 10px;
+  border-radius: 10px;
   margin: auto;
   align-items: center;
+  border-style: none;
+  background-color:#2e5eb2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
 
+}
+
+.button-back:hover {
+  cursor: pointer;
+  background-color: #456fb7;
+}
+
+.button-back:active {
+  background-color:#264f96;
 }
 
 .pokemon-detail article {
@@ -601,4 +627,11 @@ aside h1 {
 
 .base-stats-detail div div {
   box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+  text-shadow: 0 0 10px black, 0 0 10px black; ;
 }
